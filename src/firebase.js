@@ -9,14 +9,14 @@ import {
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// 🔐 Configurazione Firebase
+// 🔐 Configurazione Firebase tramite variabili d'ambiente
 const firebaseConfig = {
-  apiKey: "AIzaSyBA30wj8q5lvMWNJ43OW99WCRuz1VHwZLU",
-  authDomain: "kakebo-live.firebaseapp.com",
-  projectId: "kakebo-live",
-  storageBucket: "kakebo-live.appspot.com",
-  messagingSenderId: "261039249179",
-  appId: "1:261039249179:web:fb85327debd01654c2a5be"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 // 🚀 Inizializza Firebase
